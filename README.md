@@ -62,8 +62,7 @@ Modular tools for preprocessing and visualization:
 
 ## 🛠️ Notes on Dataset Classes & Transforms
 
-The dataset class structure will likely need to be adapted to your specific data format. Our current transform pipeline is a mix of `torchvision` (PIL) and MONAI (`numpy` / `torch.Tensor`), due to legacy code.  
-⚠️ **Tip**: If you're using MONAI, we strongly recommend fully switching to their pipeline rather than mixing with `torchvision` to avoid transform issues.
+You will need to update the dataset class to match your chosen structure.
 
 ---
 
