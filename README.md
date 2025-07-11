@@ -14,6 +14,8 @@ The core utilities provided here are designed to support researchers working wit
 - **Comprehensive preprocessing utilities** to standardize, process, and analyze CT images.
 - **Baseline files provided** to compare against. 
 
+MAE Models are available [here](https://www.dropbox.com/scl/fo/u9t4jb7edzkdcd5wpmz64/AMERnJD0Gk8A1FMnDpVigzw?rlkey=ywa18ok6pfjyrh09u3qat6sn6&st=ksxyjbam&dl=0)
+
 ---
 
 ## 📁 Repository Structure
@@ -74,12 +76,12 @@ If you use this code or find it helpful, please consider citing:
 }
 ```
 
-For setting up the baseline we made use of a pretrained nnUNet on common interstitial lung patterns, we have made this available below,⚠️ *Important*: This was trained using the first version of nnUNet. The model is available here: 
+For setting up the Fontanellaz et al. baseline we made use of a pretrained nnUNet on common interstitial lung patterns, we have made this available below,⚠️ *Important*: This was trained using the first version of nnUNet. The model is available [here](https://www.dropbox.com/scl/fo/4bd86pe7q54u8nx21laer/AC7Yyg3ir8GXTx7KvTG8j8o?rlkey=95rzlk4v6xyw6g2o5gzqq6kg8&st=0zmh68ak&dl=0)
 
 If you make use of this, please cite the following paper: 
 
 ```
-@ARTICLE{29,
+@ARTICLE{fontanellaz2024computer-aideddiagnosis,
   author={Fontanellaz, M. and Christe, A. and Christodoulidis, et al.},
   journal={IEEE Access}, 
   title={Computer-aided Diagnosis System for Lung Fibrosis: from the Effect of Radiomic Features and Multi-layer-perceptron Mixers to Pre-clinical Evaluation}, 
