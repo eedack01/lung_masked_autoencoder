@@ -89,12 +89,14 @@ We also used a pretrained nnUNet from Fontanellaz et al. on interstitial lung pa
 If you use this model, please cite:
 
 ```bibtex
-@ARTICLE{fontanellaz2024computer-aideddiagnosis,
-  author={Fontanellaz, M. and Christe, A. and Christodoulidis, et al.},
+@ARTICLE{10381702,
+  author={Fontanellaz, M. and Christe, A. and Christodoulidis, S. and Dack, E. and Roos, J. and Drakopoulos, D. and Sieron, D. and Peters, A. and Geiser, T. and Funke-Chambour, M. and Heverhagen, J. and Hoppe, H. and Exadaktylos, A. K. and Ebner, L. and Mougiakakou, S.},
   journal={IEEE Access}, 
-  title={Computer-aided Diagnosis System for Lung Fibrosis: from the Effect of Radiomic Features and Multi-layer-perceptron Mixers to Pre-clinical Evaluation}, 
-  year={2024}
-}
+  title={Computer-Aided Diagnosis System for Lung Fibrosis: From the Effect of Radiomic Features and Multi-Layer-Perceptron Mixers to Pre-Clinical Evaluation}, 
+  year={2024},
+  volume={12},
+  pages={25642-25656},
+  doi={10.1109/ACCESS.2024.3350430}}
 ```
 
 ---
