@@ -68,7 +68,7 @@ You will need to update the dataset class to match your chosen structure.
 
 ## 📖 Citing Our Work
 
-If you use this code or find it helpful, please consider citing:
+If you use this code or find it helpful, please cite our work:
 
 ```bibtex
 @misc{dack2025understandingdatasetbiasmedical,
@@ -82,7 +82,7 @@ If you use this code or find it helpful, please consider citing:
 }
 ```
 
-We also used a pretrained nnUNet from Fontanellaz et al. on interstitial lung patterns:
+To replicate the baseline in Fontanellaz et al., we use a pretraiend nnUNet (version 1 of nnUNet!) to segment common interstitial lung patterns:
 
 📦 [Download the nnUNet model here](https://www.dropbox.com/scl/fo/4bd86pe7q54u8nx21laer/AC7Yyg3ir8GXTx7KvTG8j8o?rlkey=95rzlk4v6xyw6g2o5gzqq6kg8&st=0zmh68ak&dl=0)
 
