@@ -82,7 +82,7 @@ If you use this code or find it helpful, please cite our work:
 }
 ```
 
-To replicate the baseline in Fontanellaz et al., we use a pretraiend nnUNet (version 1 of nnUNet!) to segment common interstitial lung patterns:
+To replicate the baseline in Fontanellaz et al., we use a pretraiend nnUNet (version 1 of nnUNet!) to segment common interstitial lung patterns, the preprocessing steps are similar to the masked auto encoder, you will need to use the resampling, cropping to the lung area (with margin) and then scaling the values with the HU units, you don't need to resize your image here to (128, 128, 128) just use the image size after the cropping, if you are getting odd results try flipping the image array with something like np.flip(axis=1), model link:
 
 📦 [Download the nnUNet model here](https://www.dropbox.com/scl/fo/4bd86pe7q54u8nx21laer/AC7Yyg3ir8GXTx7KvTG8j8o?rlkey=95rzlk4v6xyw6g2o5gzqq6kg8&st=0zmh68ak&dl=0)
 
