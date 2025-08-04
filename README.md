@@ -71,7 +71,7 @@ You will need to update the dataset class to match your chosen structure.
 If you use this code or find it helpful, please cite our work:
 
 ```bibtex
-@misc{dack2025understandingdatasetbiasmedical,
+<!-- @misc{dack2025understandingdatasetbiasmedical,
   title={Understanding Dataset Bias in Medical Imaging: A Case Study on Chest X-rays}, 
   author={Ethan Dack and Chengliang Dai},
   year={2025},
@@ -79,7 +79,7 @@ If you use this code or find it helpful, please cite our work:
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2507.07722}
-}
+} -->
 ```
 
 To replicate the baseline in Fontanellaz et al., we use a pretraiend nnUNet (version 1 of nnUNet!) to segment common interstitial lung patterns, the preprocessing steps are similar to the masked auto encoder, you will need to use the resampling, cropping to the lung area (with margin) and then scaling the values with the HU units, you don't need to resize your image here to (128, 128, 128) just use the image size after the cropping, if you are getting odd results try flipping the image array with something like np.flip(axis=1), model link:

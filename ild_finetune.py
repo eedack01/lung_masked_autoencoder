@@ -94,19 +94,13 @@ def main(lr, wd, bs, seed):
     # Step 1: set data loader
     train_transforms = Compose(
         [
-            # Orientation(axcodes="RAS"),  # Ensure consistent orientation
-            # CropForeground( source_key="image"),  # Crop foreground
-            # RandFlip(spatial_axis=[0], prob=0.10),
-            # RandFlip(spatial_axis=[1], prob=0.10),
-            # RandFlip(spatial_axis=[2], prob=0.10),
-            # RandRotate90( prob=0.10, max_k=3),
+            Orientation(axcodes="RAS"),  # Ensure consistent orientation
             ToTensor(),  # Convert to tensor
         ]
     )
     val_transforms = Compose(
         [
-            # Orientation( axcodes="RAS"),
-            # CropForeground( source_key="image"),
+            Orientation( axcodes="RAS"),
             ToTensor(),
         ]
     )
@@ -151,7 +145,6 @@ def main(lr, wd, bs, seed):
     
     total_iters = len(dataloaders['train']) * args.train['num_epochs']
     print(total_iters, total_iters * 0.1) 
-    # lr_scheduler = CosineAnnealingLR(optimizer, T_max=total_iters)
     scheduler = CosineAnnealingWarmupRestarts(optimizer,
                                                   first_cycle_steps=total_iters,
                                                   cycle_mult=1.0,
@@ -160,7 +153,6 @@ def main(lr, wd, bs, seed):
                                                   warmup_steps=int(total_iters * 0.1),
                                                   gamma=1.0)
     
-    # scheduler = CosineAnnealingLR(optimizer, T_max=args.train['num_epochs'])
     class_weights = torch.tensor([3.8889, 5.0000, 5.8333, 2.6923]).to(device)
     if args.mixup:
         mixup_fn = Mixup(
