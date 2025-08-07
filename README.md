@@ -53,6 +53,8 @@ Modular tools for preprocessing and visualization:
 
 - **`preprocess.py`**  
   Converts and preprocesses CT scans: resampling, cropping via lung masks, scaling to [0, 1], and saving as `.npz`.
+  We had to align all images to the same position, a processed image should look something like the following: 
+  ![Masked Lung Reconstruction](./mae.png)
 
 - **`visualise.py` & `visualise_patches.py`**  
   `visualise.py` reconstructs and visualizes masked areas for inspection.  
@@ -71,10 +73,22 @@ You will need to update the dataset class to match your chosen structure.
 If you use this code or find it helpful, please cite our work:
 
 ```bibtex
-
+@misc{dack2025unmaskinginterstitiallungdiseases,
+      title={Unmasking Interstitial Lung Diseases: Leveraging Masked Autoencoders for Diagnosis}, 
+      author={Ethan Dack and Lorenzo Brigato and Vasilis Dedousis and Janine Gote-Schniering and Cheryl and Hanno Hoppe and Aristomenis Exadaktylos and Manuela Funke-Chambour and Thomas Geiser and Andreas Christe and Lukas Ebner and Stavroula Mougiakakou},
+      year={2025},
+      eprint={2508.04429},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2508.04429}, 
+}
 ```
 
-To replicate the baseline in Fontanellaz et al., we use a pretraiend nnUNet (version 1 of nnUNet!) to segment common interstitial lung patterns, the preprocessing steps are similar to the masked auto encoder, you will need to use the resampling, cropping to the lung area (with margin) and then scaling the values with the HU units, you don't need to resize your image here to (128, 128, 128) just use the image size after the cropping, if you are getting odd results try flipping the image array with something like np.flip(axis=1), model link:
+To replicate the baseline in Fontanellaz et al., we use a pretraiend nnUNet (version 1 of nnUNet!) to segment common interstitial lung patterns, the preprocessing steps are similar to the masked auto encoder, you will need to use the resampling, cropping to the lung area (with margin) and then scaling the values with the HU units, you don't need to resize your image here to (128, 128, 128) just use the image size after the cropping, if you are getting odd results try flipping the image array with something like np.flip(axis=1), the input image should look something like the following: 
+![Masked Lung Reconstruction](./nnunet.png)
+
+
+model link:
 
 📦 [Download the nnUNet model here](https://www.dropbox.com/scl/fo/4bd86pe7q54u8nx21laer/AC7Yyg3ir8GXTx7KvTG8j8o?rlkey=95rzlk4v6xyw6g2o5gzqq6kg8&st=0zmh68ak&dl=0)
 
