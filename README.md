@@ -2,7 +2,7 @@
 
 This repository contains the code used in our paper:
 
-### 🔗 [Unmasking Interstitial Lung Diseases: Leveraging Masked Autoencoders for Diagnosis](https://arxiv.org/)
+### 🔗 [Unmasking Interstitial Lung Diseases: Leveraging Masked Autoencoders for Diagnosis](https://arxiv.org/abs/2508.04429)
 
 ---
 
